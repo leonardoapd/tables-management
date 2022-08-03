@@ -74,7 +74,7 @@
             <TextField fx:id="usernameTextField" promptText="jhondoe@apple.com" styleClass="username-field" stylesheets="@styles/styles.css" />
             <Label fx:id="passwordLabel" styleClass="secondary-label" stylesheets="@styles/styles.css" text="Password:" />
             <PasswordField fx:id="passwordField" promptText="********" styleClass="password-field" stylesheets="@styles/styles.css" />
-            <Button fx:id="loginButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loginButtonPressed" styleClass="login-button" stylesheets="@styles/styles.css" text="Login">
+            <Button fx:id="loginButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loginButtonPressed" prefHeight="32.0" styleClass="login-button" stylesheets="@styles/styles.css" text="Login">
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>

@@ -16,7 +16,7 @@ public class LoginController {
     /* Validate user login */
     public boolean login(String username, String password) {
         try {
-            user = userModel.searchUser(username);
+            user = new User(username, password);
             return userModel.validateUser(user);
         } catch (Exception e) {
             return false;

@@ -1,18 +1,24 @@
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.fxml.Initializable;
 
-public class TablesView extends Application {
+public class TablesView extends Application{
 
     @FXML
     private AnchorPane mainFloorAPane;
@@ -31,6 +37,9 @@ public class TablesView extends Application {
 
     @FXML
     private ImageView tablesButton;
+
+    @FXML
+    private Button logoutButton;
 
     @FXML
     private MainFloorStage mainFloorStage;
@@ -53,16 +62,17 @@ public class TablesView extends Application {
 
     }
 
-    public AnchorPane getMainFloorAPane() {
-        return mainFloorAPane;
+    @FXML
+    void logoutButtonPressed(ActionEvent event) {
+        /* Close the window */
+        Stage stage = (Stage) logoutButton.getScene().getWindow();
+        stage.close();
+        App app = new App();
+        try {
+            app.start(new Stage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    public AnchorPane getPatioAPane() {
-        return patioAPane;
-    }
-
-    
-
-    
 
 }

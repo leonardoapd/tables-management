@@ -11,7 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="680.0" styleClass="app-background" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDishView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="680.0" styleClass="app-background" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDishView">
    <children>
       <Button fx:id="addButton" layoutX="285.0" layoutY="359.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="login-button" stylesheets="@styles/styles.css" text="Add Dish">
          <graphic>
@@ -41,7 +41,7 @@
             <String fx:value="go-back-button" />
          </styleClass>
       </Button>
-      <Button fx:id="deleteButton" layoutX="155.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="delete-button" stylesheets="@styles/styles.css" text="Delete">
+      <Button fx:id="deleteButton" layoutX="155.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="delete-button" stylesheets="@styles/styles.css" text="Delete Dish">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>

@@ -1,16 +1,10 @@
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 import controller.DishController;
+import controller.OrderController;
 import entities.Dish;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -19,8 +13,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
-import javafx.print.PrinterJob;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -70,11 +62,11 @@ public class AddDishView extends Application implements Initializable {
      */
     private ArrayList<String> foodDishes = new ArrayList<>();
 
-    /* An instance of the Model of the Dish */
+    /* An instance of the Controller of the Dish */
     private DishController dishController = new DishController();
 
-    /* An instance of a File */
-    private File file;
+    /* An instance of the Controller of the Order */
+    private OrderController orderController = new OrderController();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -201,7 +193,7 @@ public class AddDishView extends Application implements Initializable {
     }
 
     @FXML
-    public void printButtonPressed(ActionEvent event) throws IOException {
+    public void printButtonPressed(ActionEvent event) {
         // /* Create a printer job object */
         // PrinterJob printerJob = PrinterJob.createPrinterJob();
         // /* If the printer job object is not null, print the table */
@@ -220,26 +212,25 @@ public class AddDishView extends Application implements Initializable {
             alert.setContentText("Please enter a table number");
             alert.showAndWait();
         } else {
+            /* Build a path to create the file of the order with the order number */
+
             /* Create a file with order number on its name */
-            file = new File("Order" + orderNumberTF.getText() + ".txt");
+            String path = "Order" + orderNumberTF.getText() + ".txt";
+
+            /* Get the content of the file */
             /* Get the table number */
             String tableNumber = tableNumberSelectedLabel.getText();
+
             /* Get the order text */
             String orderText = orderList.getText();
-
             /* Delete the \n from the orderText */
             orderText = orderText.replace("\n", ";");
 
             /* Get the total */
             String total = String.format("%.2f", getTotal());
 
-            // Create an instance of a file writer in append mode
-            PrintWriter writer = new PrintWriter(file); // append mode
-
-            // Write to the file
-            writer.println(tableNumber + "/" + orderText + "/" + total);
-            // Close the file writer
-            writer.close();
+            String order = tableNumber + "/" + orderText + "/" + total;
+            orderController.createOrder(order, path);
 
             /* Show a message that the order was added */
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -251,7 +242,7 @@ public class AddDishView extends Application implements Initializable {
     }
 
     @FXML
-    void loadButtonPressed(ActionEvent event) throws FileNotFoundException {
+    void loadButtonPressed(ActionEvent event) {
         /* Check if the ordertextfield is empty */
         if (orderNumberTF.getText().isEmpty()) {
             /* Show a error message */
@@ -265,21 +256,35 @@ public class AddDishView extends Application implements Initializable {
              * Use a Scanner object to search the file in the folder with the name Order +
              * orderNumberTF
              */
-            Scanner text = new Scanner(new File("Order" + orderNumberTF.getText() + ".txt"));
+            try {
 
-            /* Get the table number */
-            while (text.hasNext()) {
-                String line = text.nextLine();
-                String[] parts = line.split("/");
-                String tableNumber = parts[0];
-                String orderText = parts[1];
-                String total = parts[2];
-                orderText = orderText.replace(";", "\n");
+                String path = "Order" + orderNumberTF.getText() + ".txt";
+
+                String[] order = orderController.loadOrder(path);
+
+                /* Get the table number */
+                String tableNumber = order[0];
+                /* Get the order text */
+                String orderText = order[1];
+                /* Get the total */
+                String total = order[2];
+
+                /* Set the table number label */
                 tableNumberSelectedLabel.setText(tableNumber);
+                /* Set the order text area */
+                orderText = orderText.replace(";", "\n");
                 orderList.setText(orderText);
+                /* Set the total label */
                 totalLabel.setText(total);
+            } catch (Exception e) {
+                /* Show a error message */
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Error");
+                alert.setContentText("The order does not exist");
+                alert.showAndWait();
             }
-            text.close();
+
         }
     }
 

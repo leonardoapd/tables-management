@@ -15,53 +15,56 @@
     -fx-padding: 8 0 4 0;
 }
 
-.login-button {
-    -fx-background-color: rgba(166, 141, 211, 0.89);
-    -fx-border-color:rgba(0, 0, 0, 0.89);
+.round-button {
+    -fx-background-radius: 5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+}
+
+.rect-button {
+    -fx-border-color:rgba(0, 0, 0, 0.2);
     -fx-text-fill: black;
     -fx-border-radius: 6;
+    -fx-background-radius: 6;
     -fx-padding: 8;
     -fx-font-family: "Nunito Sans";
     -fx-vgap: 16;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 4);
+}
+
+.login-button {
+    -fx-background-color: rgba(166, 141, 211, 0.89);
+    
 }
 
 .go-back-button {
     -fx-background-color: rgba(255, 255, 255, 1);
-    -fx-border-color:rgba(0, 0, 0, 0.89);
-    -fx-text-fill: black;
-    -fx-border-radius: 6;
-    -fx-padding: 8;
-    -fx-font-family: "Nunito Sans";
-    -fx-vgap: 16;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 4);
+    
 }
 
 .delete-button {
     -fx-background-color: rgba(243, 90, 90, 0.89);
-    -fx-border-color:rgba(0, 0, 0, 0.89);
-    -fx-text-fill: black;
-    -fx-border-radius: 6;
-    -fx-padding: 8;
-    -fx-font-family: "Nunito Sans";
-    -fx-vgap: 16;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 4);
+    
 }
 
 .username-field {
     -fx-pref-height: 32;
     -fx-highlight-fill: rgba(166, 141, 211, 0.89);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 4);
-    -fx-border-color:rgba(0, 0, 0, 0.89);
+    -fx-border-color:rgba(0, 0, 0, 0.2);
     -fx-border-radius: 6;
+    -fx-background-radius: 6;
 }
 
 .password-field {
     -fx-pref-height: 32;
     -fx-highlight-fill: rgba(166, 141, 211, 0.89);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 4);
-    -fx-border-color:rgba(0, 0, 0, 0.89);
+    -fx-border-color:rgba(0, 0, 0, 0.2);
     -fx-border-radius: 6;
+    -fx-background-radius: 6;
 }
 
 .login-button:pressed, .go-back-button:pressed, .delete-button:pressed {

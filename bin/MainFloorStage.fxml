@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFloorStage">
+<AnchorPane prefHeight="340.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFloorStage">
    <children>
       <ImageView fx:id="mFloorTable1" accessibleHelp="Table 1" accessibleRole="TOOLTIP" accessibleText="1" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="43.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,7 +33,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable4" accessibleHelp="Table 4" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable4" accessibleHelp="Table 4" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="140.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
@@ -41,7 +41,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable5" accessibleText="Table 5" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable5" accessibleText="Table 5" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="140.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
@@ -49,7 +49,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable6" accessibleHelp="Table 6" fitHeight="150.0" fitWidth="64.0" layoutX="380.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable6" accessibleHelp="Table 6" fitHeight="150.0" fitWidth="64.0" layoutX="380.0" layoutY="140.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable7" accessibleHelp="Table 7" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable7" accessibleHelp="Table 7" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="241.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
@@ -65,7 +65,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable8" accessibleHelp="Table 8" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable8" accessibleHelp="Table 8" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="241.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
@@ -73,7 +73,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="mFloorTable9" accessibleHelp="Table 9" fitHeight="150.0" fitWidth="64.0" layoutX="380.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mFloorTable9" accessibleHelp="Table 9" fitHeight="150.0" fitWidth="64.0" layoutX="380.0" layoutY="241.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons/dining-table.png" />
          </image>
