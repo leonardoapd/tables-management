@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -10,7 +8,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
 
 <Pane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TablesView">
    <children>
@@ -29,276 +26,18 @@
                </children>
             </AnchorPane>
             <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
-              <tabs>
-                <Tab fx:id="mainFloorTab" closable="false" text="Main Floor">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="app-background" stylesheets="@styles/styles.css">
-                           <children>
-                              <ImageView fx:id="mFloorTable1" accessibleHelp="Table 1" accessibleRole="TOOLTIP" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="43.0" onMouseClicked="#onTableClick" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable2" accessibleHelp="Table 2" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable4" accessibleHelp="Table 4" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable3" accessibleHelp="Table 3" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable5" accessibleText="Table 5" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable6" accessibleHelp="Table 6" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable7" accessibleHelp="Table 7" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable8" accessibleHelp="Table 8" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="mFloorTable9" accessibleHelp="Table 9" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/dining-table.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <Label layoutX="92.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="2">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="92.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="3">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="4">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="7">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="5">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="8">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="6">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="9">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="92.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="1">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </Tab>
-                <Tab fx:id="patioTab" text="Patio">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="app-background" stylesheets="@styles/styles.css">
-                           <children>
-                              <ImageView fx:id="patioTable1" accessibleHelp="Table 1" accessibleRole="TOOLTIP" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable2" accessibleHelp="Table 2" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable4" accessibleHelp="Table 4" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable3" accessibleHelp="Table 3" fitHeight="150.0" fitWidth="64.0" layoutX="40.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable5" accessibleText="Table 5" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable6" accessibleHelp="Table 6" fitHeight="150.0" fitWidth="64.0" layoutX="210.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable7" accessibleHelp="Table 7" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable8" accessibleHelp="Table 8" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <ImageView fx:id="patioTable9" accessibleHelp="Table 9" fitHeight="150.0" fitWidth="64.0" layoutX="387.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/terrace.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                              <Label layoutX="92.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="2">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="92.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="3">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="4">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="7">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="5">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="172.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="8">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="262.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="6">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="439.0" layoutY="267.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="9">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                              <Label layoutX="92.0" layoutY="75.0" prefHeight="24.0" prefWidth="24.0" styleClass="table-number-label" text="1">
-                                 <stylesheets>
-                                    <URL value="@../../JavaFXDemo/src/styles/styles.css" />
-                                    <URL value="@styles/styles.css" />
-                                 </stylesheets>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                </Tab>
-              </tabs>
+               <tabs>
+                  <Tab fx:id="mainFloorTab" closable="false" text="Main Floor">
+                     <AnchorPane fx:id="mainFloorAPane" prefHeight="340.0" prefWidth="500.0">
+                        <fx:include fx:id="mainFloorPane" source="MainFloorStage.fxml" />
+                     </AnchorPane>
+                  </Tab>
+                  <Tab fx:id="patioTab" text="Patio">
+                     <AnchorPane fx:id="pationAPane" prefHeight="340.0" prefWidth="500.0">
+                        <fx:include fx:id="patioPane" source="PatioStage.fxml" />
+                     </AnchorPane>
+                  </Tab>
+               </tabs>
             </TabPane>
          </items>
       </SplitPane>

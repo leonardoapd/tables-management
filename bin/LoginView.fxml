@@ -45,7 +45,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="480.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginView">
+<VBox prefHeight="480.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginView">
   <children>
       <VBox cache="true" depthTest="DISABLE" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#loginButtonEnterPressed" prefHeight="280.0" prefWidth="560.0" VBox.vgrow="ALWAYS">
          <children>

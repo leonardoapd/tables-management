@@ -1,23 +1,26 @@
 package controller;
 
+import entities.User;
+import model.UserModel;
+
 public class LoginController {
+
+    private final UserModel userModel;
+    private User user;
+
     /* Login Controller */
     public LoginController() {
+        this.userModel = new UserModel();
     }
 
+    /* Validate user login */
     public boolean login(String username, String password) {
-        /* Login method */
-        boolean isLogin = false;
-        if (username.equals("admin") && password.equals("admin")) {
-            /* Login successful */
-            System.out.println("Login successful");
-            isLogin = true;
-        } else {
-            /* Login failed */
-            System.out.println("Login failed");
-            isLogin = false;
+        try {
+            user = userModel.searchUser(username);
+            return userModel.validateUser(user);
+        } catch (Exception e) {
+            return false;
         }
-        return isLogin;
     }
 
 }

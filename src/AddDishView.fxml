@@ -6,13 +6,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="520.0" styleClass="app-background" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDishView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="680.0" styleClass="app-background" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDishView">
    <children>
-      <Button fx:id="addButton" layoutX="260.0" layoutY="283.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="login-button" stylesheets="@styles/styles.css" text="Add Dish">
+      <Button fx:id="addButton" layoutX="285.0" layoutY="359.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="login-button" stylesheets="@styles/styles.css" text="Add Dish">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,7 +25,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="goBackButton" layoutX="27.0" layoutY="283.0" mnemonicParsing="false" onAction="#goBackButtonPressed" prefHeight="35.0" prefWidth="106.0" stylesheets="@styles/styles.css" text="Go Back">
+      <Button fx:id="goBackButton" layoutX="27.0" layoutY="359.0" mnemonicParsing="false" onAction="#goBackButtonPressed" prefHeight="35.0" prefWidth="106.0" stylesheets="@styles/styles.css" text="Go Back">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -40,7 +41,7 @@
             <String fx:value="go-back-button" />
          </styleClass>
       </Button>
-      <Button fx:id="deleteButton" layoutX="144.0" layoutY="283.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="delete-button" stylesheets="@styles/styles.css" text="Delete">
+      <Button fx:id="deleteButton" layoutX="155.0" layoutY="359.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="delete-button" stylesheets="@styles/styles.css" text="Delete">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -52,9 +53,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ListView fx:id="dishList" layoutX="27.0" layoutY="56.0" prefHeight="212.0" prefWidth="224.0" />
-      <TextArea fx:id="orderList" layoutX="260.0" layoutY="56.0" prefHeight="212.0" prefWidth="224.0" />
-      <Button fx:id="printButton" layoutX="377.0" layoutY="283.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="35.0" prefWidth="106.0" styleClass="login-button" stylesheets="@styles/styles.css" text="Print Order">
+      <ListView fx:id="dishList" layoutX="27.0" layoutY="56.0" prefHeight="284.0" prefWidth="300.0" />
+      <TextArea fx:id="orderList" layoutX="347.0" layoutY="56.0" prefHeight="263.0" prefWidth="300.0" />
+      <Button fx:id="printButton" layoutX="541.0" layoutY="359.0" mnemonicParsing="false" onAction="#printButtonPressed" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #68D8D6;" styleClass="login-button" stylesheets="@styles/styles.css" text="Print Order">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -67,6 +68,21 @@
          </cursor>
       </Button>
       <Label fx:id="tableNumberSelectedLabel" layoutX="27.0" layoutY="25.0" text="Table # Selected" />
-      <Label layoutX="260.0" layoutY="25.0" text="Order" />
+      <Label layoutX="347.0" layoutY="25.0" text="Order" />
+      <Label layoutX="348.0" layoutY="328.0" text="Total:" />
+      <Label fx:id="totalLabel" layoutX="616.0" layoutY="328.0" prefHeight="17.0" prefWidth="31.0" textAlignment="RIGHT" />
+      <TextField fx:id="orderNumberTF" layoutX="601.0" layoutY="21.0" prefHeight="25.0" prefWidth="46.0" />
+      <Button fx:id="loadButton" layoutX="413.0" layoutY="359.0" mnemonicParsing="false" onAction="#loadButtonPressed" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #FCAF58;" styleClass="login-button" stylesheets="@styles/styles.css" text="Load Order">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/reload.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
