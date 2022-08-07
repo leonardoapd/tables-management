@@ -35,6 +35,8 @@ public class LoginView {
 
     @FXML
     private TextField usernameTextField;
+    
+    LoginController loginController = new LoginController();
 
     /* Get the event when the button is pressed */
     @FXML
@@ -57,7 +59,6 @@ public class LoginView {
     /* Static method to check login */
     public void checkLogin() {
         /* Create an object of LoginController */
-        LoginController loginController = new LoginController();
         /* Get the inputs from the text fields */
         String username = usernameTextField.getText();
         String password = passwordField.getText();
